@@ -20,6 +20,23 @@ stylesheet, so the title and description still looked joined. Two changes:
 - Added `?v=2` to the stylesheet link on all 25 pages, so browsers and the CDN fetch
   the new CSS instead of serving a cached copy.
 
+### Mobile pass
+Audited every page at 320, 360, 375, 414, 480, 600 and 768px in a real browser viewport.
+
+- **Fixed invisible bold text on the black slabs.** Bold text inside a dark block was
+  inheriting the near-black body colour, so "Amuri Heat Pumps" on the homepage was
+  effectively unreadable. Bold text in dark blocks is now white.
+- **Enlarged tap targets.** The header phone number, the contact phone and email, the
+  area links, the footer links, the breadcrumbs and the related-page tags were all under
+  40px tall on a phone. The homepage went from 27 undersized targets to 2, and both of
+  those are ordinary inline links inside paragraphs.
+- Header logo raised from 38px to 46px on phones, where it was too small to read.
+- Buttons given a 52px minimum height on touch screens.
+
+**Checked and already correct:** no horizontal overflow on any page at any width, 17px
+body text so iOS will not zoom the form fields, form inputs at 17px, the menu, call bar
+and accordions all working at phone widths.
+
 ### Removed the 7 days a week availability claim
 The previous site claimed the business was always switched on, 7 days a week, and that
 had been carried across into this build. It is not accurate, so it has been removed everywhere: the header label,

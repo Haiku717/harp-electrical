@@ -480,3 +480,30 @@ a.row:hover .row__go { color: #fff; }
 }
 .toast--show { transform: translateY(0); }
 .toast--error { border-bottom-color: #ffb000; }
+
+/* ---------- Mobile refinements ---------- */
+
+/* Bold text inside dark blocks was inheriting the near-black body colour,
+   which made it invisible on the black slabs. */
+.slab strong, .aside strong { color: #fff; }
+
+@media (max-width: 720px) {
+  /* Bigger tap targets on touch screens */
+  .area-cols a { padding: 13px 0; }
+  .tags a { padding: 11px 16px; }
+  .foot li { margin-bottom: 0; }
+  .foot li a { display: inline-block; padding: 10px 0; }
+  .foot__bottom a { display: inline-block; padding: 11px 0; }
+  .crumb a { display: inline-block; padding: 11px 0; }
+  /* Phone number in the header is a primary call to action */
+  .bar__phone { padding: 8px 0; }
+  /* Contact details are tap-to-call and tap-to-email */
+  .cdetail a { display: inline-block; padding: 9px 0; }
+  .aside .btn, .btns .btn { min-height: 52px; }
+  /* Header logo was too small to read on a phone */
+  .bar__logo { height: 46px; }
+}
+@media (max-width: 380px) {
+  .bar__in { gap: 12px; }
+  .bar__logo { height: 42px; }
+}
