@@ -2,6 +2,25 @@
 
 Every edit to this site gets a dated entry here before it is pushed.
 
+## 2026-09-06 (later)
+
+### Fix: service row titles ran into their descriptions
+The title and description in each numbered service row were both inline spans, so they
+flowed together as one line instead of stacking, and the title margin had no effect.
+Set both to `display: block`, gave the title a 9px gap underneath, and set the
+description line-height to 1.5.
+
+### Removed the 7 days a week availability claim
+The previous site claimed the business was always switched on, 7 days a week, and that
+had been carried across into this build. It is not accurate, so it has been removed everywhere: the header label,
+the facts strip, the contact block hours, the sidebar note on every inner page, the
+homepage FAQ, the repairs page, several meta descriptions, and the opening hours in the
+schema (now Monday to Friday).
+
+The homepage FAQ question about weekends was replaced with one about getting a price
+before work starts. **Hours are currently listed as Monday to Friday and still need
+confirming.**
+
 ## 2026-09-06
 
 ### Design: bold trade / signage

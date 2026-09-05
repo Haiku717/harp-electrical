@@ -284,10 +284,11 @@ a.row:hover .row__go { color: #fff; }
   color: var(--line); line-height: 1;
 }
 .row__t {
+  display: block;
   font-family: var(--head); text-transform: uppercase; font-weight: 700;
-  font-size: 1.55rem; color: var(--black); line-height: 1.05; margin: 0 0 4px;
+  font-size: 1.55rem; color: var(--black); line-height: 1.05; margin: 0 0 9px;
 }
-.row__d { color: var(--muted); font-size: 0.97rem; margin: 0; }
+.row__d { display: block; color: var(--muted); font-size: 0.97rem; line-height: 1.5; margin: 0; }
 .row__go { font-family: var(--head); font-size: 1.7rem; color: var(--red); line-height: 1; }
 @media (max-width: 640px) {
   .row { grid-template-columns: 46px 1fr; gap: 4px 14px; padding: 18px 4px; }
