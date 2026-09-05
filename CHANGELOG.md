@@ -10,6 +10,16 @@ flowed together as one line instead of stacking, and the title margin had no eff
 Set both to `display: block`, gave the title a 9px gap underneath, and set the
 description line-height to 1.5.
 
+### Service rows: made the stacking robust and busted the CSS cache
+The previous fix was correct in the file but browsers were still showing the old
+stylesheet, so the title and description still looked joined. Two changes:
+
+- Wrapped the title and description in a `.row__c` flex column, so they stack because
+  of the parent rather than relying on a `display` rule on each child. Flex containers
+  blockify their children, so this holds even if a child rule is overridden.
+- Added `?v=2` to the stylesheet link on all 25 pages, so browsers and the CDN fetch
+  the new CSS instead of serving a cached copy.
+
 ### Removed the 7 days a week availability claim
 The previous site claimed the business was always switched on, 7 days a week, and that
 had been carried across into this build. It is not accurate, so it has been removed everywhere: the header label,

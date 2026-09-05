@@ -283,10 +283,13 @@ a.row:hover .row__go { color: #fff; }
   font-family: var(--head); font-weight: 700; font-size: 2.1rem;
   color: var(--line); line-height: 1;
 }
+/* flex on the wrapper blockifies the children, so the title and description
+   always stack even if a child display rule is overridden */
+.row__c { display: flex; flex-direction: column; gap: 9px; }
 .row__t {
   display: block;
   font-family: var(--head); text-transform: uppercase; font-weight: 700;
-  font-size: 1.55rem; color: var(--black); line-height: 1.05; margin: 0 0 9px;
+  font-size: 1.55rem; color: var(--black); line-height: 1.05; margin: 0;
 }
 .row__d { display: block; color: var(--muted); font-size: 0.97rem; line-height: 1.5; margin: 0; }
 .row__go { font-family: var(--head); font-size: 1.7rem; color: var(--red); line-height: 1; }
